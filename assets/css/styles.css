@@ -9818,4 +9818,17 @@ footer .mention {
   font-size: 5em;
 }
 
+.formulaire h4 {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 3em;
+}
+.formulaire form {
+  padding: 35px 0;
+  text-align: center;
+}
+.formulaire p {
+  padding: 20px 0;
+}
+
 /*# sourceMappingURL=styles.css.map */
