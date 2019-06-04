@@ -1,0 +1,27 @@
+.produit {
+
+    h2 {
+        text-align: center;
+        margin: 40px;
+    }
+    img {
+        @extend .img-fluid;
+        max-width: 100%;
+    }
+    .prix {
+        font-size: 3em;
+        margin: 20px 0;
+    }
+    .commande {
+        margin: 10px 0;
+        a {
+            color: $orange-dark;
+            &:hover {
+                color: $link-hover
+            }
+        }
+        .retour {
+            color: $gray-dark !important;
+        }
+    }
+}

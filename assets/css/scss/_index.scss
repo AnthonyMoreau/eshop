@@ -38,3 +38,74 @@ header {
         }
     }
 }
+main {
+    .presentation {
+        margin: 100px 0 0 80px;
+        .image {
+            position: relative;
+            height: auto;
+            width: auto;
+            img {
+                @extend .img-fluid;
+                max-width: 100%;
+            }
+            span {
+                @extend .d-flex, .justify-content-center;
+                position: absolute;
+                font-size: 1.5em;
+                color: $smoke;
+                top: 80%;
+                left: 16%;
+            }
+        }
+        .content {
+            @extend .d-flex, .align-items-center;
+            margin-top: 20%;
+            padding: 8% 10px;
+            text-align: justify;
+            height: inherit;
+            color: $smoke;
+            background-color: $gray-medium;
+            border-radius: 10px;
+        }
+        .presentation_site{
+            font-size: 1.8em;
+            width: auto;
+            padding: 30px;
+            text-align: justify;
+        }
+    }
+    .mon_caroussel {
+        margin: 0 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+        img {
+            @extend .img-fluid;
+            max-width: 100%;
+        }
+    }
+}
+footer {
+    ul {
+        text-align: center;
+        margin: 30px 20px;
+        background-color:$gray-medium;
+        padding: 20px;
+        border-radius: 10px;
+        li {
+            display: inline;
+            padding: 30px;
+            a{
+                color: $smoke;
+                &:hover{
+                    color: $link-hover;
+                }
+            }
+        }
+    }
+    .mention {
+        text-align: center;
+        font-size: 0.7em;
+        
+    }
+}

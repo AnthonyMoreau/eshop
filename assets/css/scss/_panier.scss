@@ -1,0 +1,23 @@
+.panier {
+    img {
+        @extend .img-fluid;
+        max-width: 50%;
+        border-radius: 10px;
+    }
+    .ajout {
+        padding: 30px;
+    }
+    span {
+        font-size: 1em;
+        padding: 10px;
+    }
+    .panier-item {
+        @extend .d-flex, .align-items-center;
+
+        h4 {
+            font-size: 5em;
+        }
+        margin-top: 30px;
+        
+    }
+}

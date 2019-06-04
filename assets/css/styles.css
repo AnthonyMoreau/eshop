@@ -470,7 +470,7 @@ mark,
   content: "— ";
 }
 
-.img-fluid {
+.img-fluid, .panier img, .produit img, main .mon_caroussel img, main .presentation .image img {
   max-width: 100%;
   height: auto;
 }
@@ -6016,7 +6016,7 @@ button.bg-dark:focus {
   display: table-cell !important;
 }
 
-.d-flex, header .navigation {
+.d-flex, .panier .panier-item, main .presentation .content, main .presentation .image span, header .navigation {
   display: flex !important;
 }
 
@@ -6306,7 +6306,7 @@ button.bg-dark:focus {
   justify-content: flex-end !important;
 }
 
-.justify-content-center {
+.justify-content-center, main .presentation .image span {
   justify-content: center !important;
 }
 
@@ -6326,7 +6326,7 @@ button.bg-dark:focus {
   align-items: flex-end !important;
 }
 
-.align-items-center, header .navigation {
+.align-items-center, .panier .panier-item, main .presentation .content, header .navigation {
   align-items: center !important;
 }
 
@@ -9696,6 +9696,126 @@ header .navigation ul a {
 }
 header .navigation ul a:hover {
   color: #e59943;
+}
+
+main .presentation {
+  margin: 100px 0 0 80px;
+}
+main .presentation .image {
+  position: relative;
+  height: auto;
+  width: auto;
+}
+main .presentation .image img {
+  max-width: 100%;
+}
+main .presentation .image span {
+  position: absolute;
+  font-size: 1.5em;
+  color: whitesmoke;
+  top: 80%;
+  left: 16%;
+}
+main .presentation .content {
+  margin-top: 20%;
+  padding: 8% 10px;
+  text-align: justify;
+  height: inherit;
+  color: whitesmoke;
+  background-color: #484d4f;
+  border-radius: 10px;
+}
+main .presentation .presentation_site {
+  font-size: 1.8em;
+  width: auto;
+  padding: 30px;
+  text-align: justify;
+}
+main .mon_caroussel {
+  margin: 0 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+main .mon_caroussel img {
+  max-width: 100%;
+}
+
+footer ul {
+  text-align: center;
+  margin: 30px 20px;
+  background-color: #484d4f;
+  padding: 20px;
+  border-radius: 10px;
+}
+footer ul li {
+  display: inline;
+  padding: 30px;
+}
+footer ul li a {
+  color: whitesmoke;
+}
+footer ul li a:hover {
+  color: #e59943;
+}
+footer .mention {
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.catalogue h2 {
+  font-size: 3em;
+  text-align: center;
+  margin: 40px 0;
+}
+.catalogue .btn-primary {
+  background-color: #945814 !important;
+  border-color: #945814 !important;
+}
+.catalogue .btn-primary:hover {
+  background-color: #e59943 !important;
+  border-color: #e59943 !important;
+}
+
+.produit h2 {
+  text-align: center;
+  margin: 40px;
+}
+.produit img {
+  max-width: 100%;
+}
+.produit .prix {
+  font-size: 3em;
+  margin: 20px 0;
+}
+.produit .commande {
+  margin: 10px 0;
+}
+.produit .commande a {
+  color: #945814;
+}
+.produit .commande a:hover {
+  color: #e59943;
+}
+.produit .commande .retour {
+  color: #1b1b1d !important;
+}
+
+.panier img {
+  max-width: 50%;
+  border-radius: 10px;
+}
+.panier .ajout {
+  padding: 30px;
+}
+.panier span {
+  font-size: 1em;
+  padding: 10px;
+}
+.panier .panier-item {
+  margin-top: 30px;
+}
+.panier .panier-item h4 {
+  font-size: 5em;
 }
 
 /*# sourceMappingURL=styles.css.map */

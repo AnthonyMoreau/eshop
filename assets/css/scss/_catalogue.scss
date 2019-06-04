@@ -1,0 +1,15 @@
+.catalogue {
+    h2 {
+        font-size: 3em;
+        text-align: center;
+        margin: 40px 0;
+    }
+    .btn-primary {
+        background-color: $orange-dark !important;
+        border-color: $orange-dark !important;
+        &:hover {
+            background-color: $link-hover !important;
+            border-color: $link-hover !important;
+        }
+    }
+}
