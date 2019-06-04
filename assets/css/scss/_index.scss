@@ -1,0 +1,40 @@
+header {
+    h1 {
+        text-align: start;
+        font-size: 1.8em;
+        margin-left: 2%;
+        color: $link-hover;
+        span {
+            font-size: 0.7em;
+            color: $smoke;
+        }
+    }
+    .background {
+        height: 40vh;
+        background-image: url('/assets/img/background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+    .nav-link {
+        padding: 0;
+    }
+    .navigation {
+        @extend .d-flex, .align-items-center;
+        text-align: end;
+        height: 8vh;
+        background-color: $gray-dark;
+        ul {
+            margin-left: 40%;
+            li {
+                padding: 10px;
+            }
+            a{
+                color: $smoke;
+                &:hover {
+                    color: $link-hover;
+                }
+            }
+        }
+    }
+}
