@@ -1,42 +1,58 @@
+let buttonAjouter = document.querySelectorAll('.ajouter')
+let buttonRetirer = document.querySelectorAll('.retired')
 let pr = document.querySelector('.pr')
-let tva = document.querySelector('.tva')
-let taxe = 0
-let button = document.querySelectorAll('.ajouter')
-let retired = document.querySelectorAll('.retired')
-let totalPrice = 0
-let p = 0
-let quantite = 0
-let qt = document.querySelector('.qt')
-console.log(pr)
+let TVA = document.querySelector('.tva')
+let QT = document.querySelector('.qt')
+let price_tmp = 0
+let Quantitie = 0
+let price = 0
+let magic = []
+let lastIndex = 0
+let p = ""
+const Tva = 6
 
-for(let i = 0; i < button.length; i++){
-
-    button[i].addEventListener('click', function(e){
-        p = Number.parseInt(e.explicitOriginalTarget.value)
-        totalPrice += p
-        taxe = Math.round(totalPrice * (20.6/100))
-        console.log(totalPrice)
-        quantite++
-        pr.innerText = "Prix : " + totalPrice  + ' Euros'
-        tva.innerText = "TVA : " + taxe  + ' Euros'
-        qt.innerText =' Quantité : ' + quantite
+for (let i = 0; i < buttonAjouter.length; i++) {
+    buttonAjouter[i].addEventListener('click' , function(e){
+        let valeur = Number.parseInt(e.explicitOriginalTarget.value)
+        Quantitie++
+        price += valeur
+        magic.push(valeur)
+        lastIndex = magic[magic.length - 1]
+        pr.innerHTML = "prix : " + price
+        TVA.innerHTML = "TVA : " + Math.round(price * (Tva /100))
+        QT.innerHTML = "Quantité : " + Quantitie
     })
-
-}
-for(let i = 0; i < retired.length; i++){
-
-    retired[i].addEventListener('click', function(e){
-        p = Number.parseInt(e.explicitOriginalTarget.value)
-        if(totalPrice !== 0){
-            totalPrice -= p
-            taxe = Math.round(totalPrice * (20.6/100))
-            quantite--
-            pr.innerText = "Prix : " + totalPrice  + ' Euros'
-            tva.innerText = "TVA : " + taxe  + ' Euros'
-            qt.innerText =' Quantité : ' + quantite
+    buttonRetirer[i].addEventListener('click' , function(e){
+        let valeur = Number.parseInt(e.explicitOriginalTarget.value)
+        if (Quantitie <= 0){
+            Quantitie = 0
+        } else {
+            Quantitie--
         }
+        if(lastIndex === valeur) {
+            price -= valeur
+            price_tmp = price
+            p = document.querySelectorAll('p')
+            for(let i = 0; i < p.length; i++){
+                if(p[i].className === lastIndex.toString()){
+                    p[i].innerText = ""
+                }
+            }
+            if(price_tmp < 0) {
+                price = 0;
+            }
+        } else {
+            p = document.querySelectorAll('p')
+            for(let i = 0; i < p.length; i++){
+                if(p[i].className === lastIndex.toString()){
+                    p[i].innerText = "Veuillez retirer l'article en cours"
+                }
+            }
+            Quantitie++
+        }
+
+        pr.innerHTML = "prix : " + price
+        TVA.innerHTML = "TVA : " + Math.round(price * (Tva /100))
+        QT.innerHTML = "Quantité : " + Quantitie
     })
-
 }
-
-

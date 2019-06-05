@@ -5,5 +5,14 @@ $gray-dark: rgb(27, 27, 29);
 $gray-medium: rgb(72, 77, 79);
 $smoke: whitesmoke;
 $link-hover: rgb(229, 153, 67);
+$orange-dark: rgb(148, 88, 20);
 
-$orange-dark: rgb(148, 88, 20)
+
+//FONTS
+
+@import url('https://fonts.googleapis.com/css?family=Arimo|Lobster|Quicksand&display=swap');
+
+$font-Arimo: 'Arimo', sans-serif;
+$font-Quicksand: 'Quicksand', sans-serif;
+$font-Lobster: 'Lobster', cursive;
+

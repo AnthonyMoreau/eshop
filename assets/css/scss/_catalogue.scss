@@ -1,5 +1,6 @@
 .catalogue {
     h2 {
+        font-family: $font-Lobster;
         font-size: 3em;
         text-align: center;
         margin: 40px 0;
@@ -10,6 +11,13 @@
         &:hover {
             background-color: $link-hover !important;
             border-color: $link-hover !important;
+        }
+    }
+    .card {
+        font-family: $font-Arimo;
+        h5 {
+            font-family: $font-Quicksand;
+            font-weight: 600;
         }
     }
 }
