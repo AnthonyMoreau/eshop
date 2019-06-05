@@ -11,17 +11,21 @@ let lastIndex = 0
 let p = ""
 const Tva = 5.5 / 100
 
+
 for (let i = 0; i < buttonAjouter.length; i++) {
+    // AJOUTER----------
     buttonAjouter[i].addEventListener('click' , function(e){
         let valeur = Number.parseInt(e.explicitOriginalTarget.value)
         Quantitie++
         price += valeur
         magic.push(valeur)
         lastIndex = magic[magic.length - 1]
+        // AFFICHAGE
         pr.innerHTML = "prix : " + price + " &euro;"
         TVA.innerHTML = "TVA : " + Math.round(price * (Tva)) + " &euro;"
         QT.innerHTML = "Quantité : " + Quantitie
     })
+    // RETIRER----------
     buttonRetirer[i].addEventListener('click' , function(e){
         let valeur = Number.parseInt(e.explicitOriginalTarget.value)
         if (Quantitie <= 0){
@@ -50,7 +54,7 @@ for (let i = 0; i < buttonAjouter.length; i++) {
             }
             Quantitie++
         }
-
+        // AFFICHAGE
         pr.innerHTML = "prix : " + price + " &euro;"
         TVA.innerHTML = "TVA : " + Math.round(price * (Tva)) + " &euro;"
         QT.innerHTML = "Quantité : " + Quantitie
