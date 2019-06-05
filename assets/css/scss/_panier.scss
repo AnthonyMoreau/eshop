@@ -21,3 +21,11 @@
         
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .panier {
+        button {
+            font-size: 0.8em
+        }
+    }
+}

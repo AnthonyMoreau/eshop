@@ -9767,6 +9767,51 @@ footer .mention {
   font-size: 0.7em;
 }
 
+@media only screen and (max-width: 576px) {
+  header h1 {
+    display: none;
+  }
+  header .navigation {
+    text-align: start;
+  }
+  header .navigation ul {
+    margin: auto;
+  }
+  header .navigation ul li {
+    padding: 5px;
+  }
+  header .navigation ul li a {
+    font-size: 1em;
+  }
+
+  main .presentation {
+    margin: 80px 0 0 0;
+  }
+  main .presentation .content {
+    margin-top: 20px;
+  }
+  main .presentation .presentation_site {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 1140px) {
+  header h1 {
+    display: none;
+  }
+  header .navigation ul {
+    margin: auto;
+  }
+
+  main .presentation {
+    margin: 80px 0 20px 0;
+  }
+  main .presentation .content {
+    margin-top: 5%;
+  }
+  main .presentation .image {
+    margin: 0 0 0 50px;
+  }
+}
 .catalogue h2 {
   font-family: "Lobster", cursive;
   font-size: 3em;
@@ -9789,6 +9834,14 @@ footer .mention {
   font-weight: 600;
 }
 
+@media only screen and (max-width: 576px) {
+  .catalogue h2 {
+    font-size: 2.5em;
+  }
+  .catalogue .card {
+    margin: 10px auto;
+  }
+}
 .produit h2 {
   text-align: center;
   margin: 40px;
@@ -9831,6 +9884,11 @@ footer .mention {
   font-size: 5em;
 }
 
+@media only screen and (max-width: 576px) {
+  .panier button {
+    font-size: 0.8em;
+  }
+}
 .formulaire h4 {
   font-family: "Lobster", cursive;
   padding: 40px 0;

@@ -113,3 +113,66 @@ footer {
         
     }
 }
+
+@media only screen and (max-width: 576px){
+    header {
+        h1 {
+            display: none;
+        }
+        .navigation {
+            text-align: start;
+            
+            ul {
+                margin: auto;
+                
+                li {
+                    padding:  5px;
+                    
+                    a {
+                        font-size: 1em;
+                    }
+                }
+                
+            }
+        }
+    }
+    main {
+        .presentation {
+            margin: 80px 0 0 0;
+
+            .content {
+                margin-top: 20px
+            }
+
+            .presentation_site{
+                font-size: 1.2em;
+
+            }
+        }
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 1140px){
+    header {
+        h1 {
+            display: none;
+        }
+        .navigation {
+            ul {
+                margin: auto;
+            }
+        }
+    }
+    main {
+        .presentation {
+
+            margin: 80px 0 20px 0;
+            
+            .content {
+                margin-top: 5%
+            }
+            .image {
+                margin: 0 0 0 50px;
+            }
+        }
+    }
+}

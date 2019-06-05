@@ -21,3 +21,14 @@
         }
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .catalogue {
+        h2 {
+            font-size: 2.5em;
+        }
+        .card {
+            margin: 10px auto
+        }
+    }
+}
